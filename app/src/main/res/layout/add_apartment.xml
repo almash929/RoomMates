@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@drawable/my_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/join_new_app_title"
+        android:id="@+id/welcome"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35sp"
+        android:textIsSelectable="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fffad5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/new_or_exsiting_app"
+        android:id="@+id/textView5"
+        android:textSize="25sp"
+        android:textIsSelectable="false"
+        android:phoneNumber="false"
+        android:layout_below="@+id/welcome"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20sp"
+        android:textAlignment="center"
+        android:textColor="#fffad5"
+        android:textColorHint="#fffad5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/choose_app"
+        android:id="@+id/textView6"
+        android:layout_marginTop="15sp"
+        android:textColor="#ffd34e" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_app_text_field"
+        android:hint="@string/app_name_hint"
+        android:layout_below="@+id/error_text_field"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40sp"
+        android:textColor="#fffad5"
+        android:textColorHint="#cfd8dc" />
+
+    <Button
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_app"
+        android:id="@+id/new_app_button"
+        android:layout_above="@+id/join_app_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:allowUndo="false"
+        android:background="#fffad5"
+        android:alpha="0.8" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/join_app_text_field"
+        android:hint="@string/app_id_hint"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40sp"
+        android:textColor="#fffad5"
+        android:textColorHint="#cfd8dc" />
+
+    <Button
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:text="@string/join_new_app"
+        android:id="@+id/join_app_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#fffad5"
+        android:alpha="0.8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/error_text_field"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45sp" />
+
+</LinearLayout>
