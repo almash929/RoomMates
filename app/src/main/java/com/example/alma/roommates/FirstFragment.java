@@ -1,18 +1,17 @@
 package com.example.alma.roommates;
 
-/**
- * Created by alma on 10/01/2016.
- */
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * Created by alma on 17/01/2016.
+ */
+public class FirstFragment extends android.support.v4.app.Fragment {
 
-public class OneFragment extends Fragment{
 
-    public OneFragment() {
+    public FirstFragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +24,6 @@ public class OneFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_one, container, false);
+        return inflater.inflate(R.layout.first_fragment, container, false);
     }
-
 }

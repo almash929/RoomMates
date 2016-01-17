@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#125688</color>
-    <color name="colorPrimaryDark">#125688</color>
-    <color name="textColorPrimary">#EfEBE9</color>
-    <color name="windowBackground">#FFFFFF</color>
-    <color name="navigationBarColor">#000000</color>
-    <color name="colorAccent">#c8e8ff</color>
+    <color name="colorPrimary">#F79748</color>
+    <color name="colorPrimaryDark">#F9583C</color>
+    <color name="colorAccent">#143D52</color>
+    <!--<color name="textColorPrimary">#EfEBE9</color>-->
+    <!--<color name="windowBackground">#FFFFFF</color>-->
+    <!--<color name="navigationBarColor">#000000</color>-->
 
-    <color name="color_primary">#795548</color>
-    <color name="color_primary_dark">#3e2723</color>
-    <color name="accent_color">#607D8B</color>
+
     <color name="black_color">#000000</color>
 
     <!-- My Colors -->
@@ -19,11 +17,4 @@
     <color name="my_pink">#DD355B</color>
     <color name="my_blue">#143D52</color>
 
-
-
-
-
-    <color name="black">#000</color>
-    <color name="orange">#FA0</color>
-    <color name="white">#FFF</color>
 </resources>

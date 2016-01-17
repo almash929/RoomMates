@@ -13,11 +13,11 @@
     <string name="action_settings">Settings</string>
     <string name="action_logout">Logout</string>
     <string name="logo_desc">App logo</string>
-    <string name="drawer_open">Open</string>
-    <string name="drawer_close">Close</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="profile_name">Alma Shalom</string>
-    <string name="profile_address">Elyaqim</string>
+    <string name="profile_apartment_id">1234567</string>
     <string name="profile_email">AlmaShalom@yahoo.com</string>
     <string name="one">ONE</string>
     <string name="two">TWO</string>
