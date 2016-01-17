@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="@drawable/my_background"
+    android:background="@drawable/md_background"
     android:gravity="center_vertical">
 
 
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/app_name"
-        android:id="@+id/textView"
+        android:id="@+id/my_app_name"
         android:textColor="#fffad5"
         android:textSize="@dimen/abc_text_size_display_2_material"
         android:textStyle="bold"
@@ -43,6 +43,7 @@
         android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="45sp" />
+        android:layout_margin="45sp"
+        android:elevation="7dp" />
 
 </LinearLayout>

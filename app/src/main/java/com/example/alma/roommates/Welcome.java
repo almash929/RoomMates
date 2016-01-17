@@ -41,7 +41,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class Welcome extends AppCompatActivity {
 
     // Declare Variable
-    Button logout;
     TextView userName,userApartmentId,userEmail;
     CircleImageView profileImage;
     DrawerLayout mDrawerLayout;
@@ -129,7 +128,6 @@ public class Welcome extends AppCompatActivity {
         userApartmentId = (TextView)findViewById(R.id.profile_apartment_id);
         userEmail = (TextView)findViewById(R.id.profile_email);
         profileImage = (CircleImageView)findViewById(R.id.profile_image);
-        logout = (Button) findViewById(R.id.logout);
         // Get current user details
         String myUserName = currentUser.getUsername().toString();
         String myUserMail = currentUser.getEmail().toString();
@@ -138,17 +136,8 @@ public class Welcome extends AppCompatActivity {
         //Set user details to view
         userName.setText(myUserName);
         userEmail.setText(myUserMail);
-        userApartmentId.setText(myUserAppId);
+        userApartmentId.setText("Apartment ID: "+myUserAppId);
         Picasso.with(Welcome.this).load(myUserImageUrl).resize(200, 200).centerCrop().into(profileImage);
-        // Logout Button Click Listener
-        logout.setOnClickListener(new OnClickListener() {
-
-            public void onClick(View arg0) {
-                // Logout current user
-                ParseUser.logOut();
-                finish();
-            }
-        });
     }
 
     private void selectItemFragment(int position){
@@ -224,6 +213,13 @@ public class Welcome extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if (id ==R.id.action_logout){
+            // Logout current user
+            ParseUser.logOut();
+            // this will now be null
+            currentUser = ParseUser.getCurrentUser();
+            finish();
         }
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;

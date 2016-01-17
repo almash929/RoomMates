@@ -46,7 +46,7 @@ public class CustomAdapter extends BaseAdapter {
             listViewHolder = new ViewHolder();
             convertView = lInflater.inflate(R.layout.listview_with_text_image, parent, false);
 
-            listViewHolder.textInListView = (TextView)convertView.findViewById(R.id.textView);
+            listViewHolder.textInListView = (TextView)convertView.findViewById(R.id.my_app_name);
             listViewHolder.imageInListView = (ImageView)convertView.findViewById(R.id.imageView);
             convertView.setTag(listViewHolder);
         }else{

@@ -43,7 +43,7 @@ public class AddApartment extends AppCompatActivity {
         joinExistingApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addUserToNewApartment(currentUser);
+                addUserToExistingApartment(currentUser);
             }
         });
     }
@@ -116,6 +116,7 @@ public class AddApartment extends AppCompatActivity {
 
                     } else {
                         joinExistingApp.setEnabled(true);
+                        creteNewApp.setEnabled(true);
                         joinAppId.setText("");
                         error.setTextColor(Color.RED);
                         error.setText("Apartment ID is Invalid");
