@@ -10,15 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
 
-/**
- * Created by alma on 17/01/2016.
- */
+public class TasksTabFragment extends android.support.v4.app.Fragment {
 
-public class ExpensesTabFragment extends android.support.v4.app.Fragment {
-
-    static final int ITEMS = 2 ;
+    static int ITEMS = 2 ;
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
 
@@ -32,10 +27,12 @@ public class ExpensesTabFragment extends android.support.v4.app.Fragment {
         //Set an Apater for the View Pager
         viewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
         tabLayout.setupWithViewPager(viewPager);
+
         return x;
     }
 
     class MyAdapter extends FragmentPagerAdapter{
+
         public MyAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -55,15 +52,16 @@ public class ExpensesTabFragment extends android.support.v4.app.Fragment {
         public int getCount() {
             return ITEMS;
         }
+
         //This method returns the title of the tab according to the position.
         @Override
         public CharSequence getPageTitle(int position) {
 
             switch (position){
                 case 0 :
-                    return "MY EXPANSES";
+                    return "MY TASKS";
                 case 1 :
-                    return "ALL EXPANSES";
+                    return "ALL TASKS";
             }
             return null;
         }

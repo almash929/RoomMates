@@ -16,10 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-/**
- * Created by alma on 15/12/2015.
- */
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Welcome extends AppCompatActivity {

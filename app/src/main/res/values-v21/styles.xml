@@ -9,4 +9,14 @@
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
     </style>
 
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/my_blue</item>
+        <item name="android:navigationBarColor">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
 </resources>

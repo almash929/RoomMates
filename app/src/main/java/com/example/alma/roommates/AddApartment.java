@@ -134,7 +134,7 @@ public class AddApartment extends AppCompatActivity {
 
     //set the view of the screen and buttons
     public void setScreenView(){
-        setContentView(R.layout.add_apartment);
+        setContentView(R.layout.set_user_apartment);
         creteNewApp = (Button)findViewById(R.id.new_app_button);
         joinExistingApp = (Button)findViewById(R.id.join_app_button);
         newAppName = (TextView)findViewById(R.id.new_app_text_field);

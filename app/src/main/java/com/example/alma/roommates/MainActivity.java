@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton = (LoginButton) findViewById(R.id.facebook_login_button);
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
             checkIfUserIsJoinedToApartment(currentUser);

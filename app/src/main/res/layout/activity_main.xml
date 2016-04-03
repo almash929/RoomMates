@@ -5,45 +5,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="@drawable/md_background"
-    android:gravity="center_vertical">
+    android:background="@drawable/open_bg2"
+    android:gravity="center_vertical|center_horizontal">
 
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:background="@drawable/my_app_icon"
-        android:layout_margin="10sp"
-        android:layout_gravity="center_horizontal"
-        android:contentDescription="gg" />
+        android:id="@+id/application_icon"
+        android:background="@drawable/my_app_icon" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/app_name"
-        android:id="@+id/my_app_name"
+        android:id="@+id/application_name"
         android:textColor="#fffad5"
         android:textSize="@dimen/abc_text_size_display_2_material"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal" />
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/app_description"
-        android:id="@+id/textView4"
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/application_description"
         android:textColor="#fffad5" />
 
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
+        android:id="@+id/facebook_login_button"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="45sp"
-        android:elevation="7dp" />
+        android:elevation="7dp"
+        android:layout_marginTop="25dp" />
 
 </LinearLayout>

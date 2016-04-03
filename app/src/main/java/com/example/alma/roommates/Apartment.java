@@ -13,6 +13,7 @@ public class Apartment extends ParseObject{
     public Apartment (){
 
     }
+
     public void setName(String name) {
         put("appName", name);
     }
