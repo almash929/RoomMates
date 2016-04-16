@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.example.alma.roommates.entities.Apartment;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
@@ -20,7 +22,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class AppLoginScreen extends AppCompatActivity {
 
     String userNameText,email,mImageUrl;
     private LoginButton loginButton;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.app_login_screen);
         loginButton = (LoginButton) findViewById(R.id.facebook_login_button);
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    ParseFacebookUtils.logInWithReadPermissionsInBackground(MainActivity.this, mPermissions, new LogInCallback() {
+                    ParseFacebookUtils.logInWithReadPermissionsInBackground(AppLoginScreen.this, mPermissions, new LogInCallback() {
                         @Override
                         public void done(ParseUser user, ParseException err) {
                             if(err==null){
@@ -117,12 +119,12 @@ public class MainActivity extends AppCompatActivity {
 
         if (app==null) {
             Log.d("MyApp", "user is not connected to an apratment");
-            Intent intent = new Intent(MainActivity.this, AddApartment.class);
+            Intent intent = new Intent(AppLoginScreen.this, AppAddApartmentScreen.class);
             startActivity(intent);
             //finish();
         } else {
-            Log.d("MyApp", "app id is NOT null go to welcome");
-            Intent intent = new Intent(MainActivity.this, Welcome.class);
+            Log.d("MyApp", "app id is NOT null go to app_main_screen");
+            Intent intent = new Intent(AppLoginScreen.this, AppMainScreen.class);
             startActivity(intent);
             finish();
         }

@@ -18,7 +18,7 @@
     <string name="facebook_login">Login with Facebook</string>
 
     <!--***** SET_USER_APARTMENT *****-->
-    <!-- welcome title with name-->
+    <!-- app_main_screen title with name-->
     <string name="join_new_app_title">Welcome</string>
     <!-- description-->
     <string name="new_or_existing_app">Apartment is where you live, work and play</string>
@@ -51,4 +51,8 @@
     <!-- menu item of logout-->
     <string name="action_logout">Logout</string>
 
+    <!-- SHOPPING LIST -->
+    <string name="add_to_list">Add a product </string>
+    <string name="deleted_successfuly">deleted succsefully</string>
+    <string name="undo">undo</string>
 </resources>

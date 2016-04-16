@@ -2,6 +2,7 @@ package com.example.alma.roommates;
 
 import android.app.Application;
 
+import com.example.alma.roommates.entities.Apartment;
 import com.facebook.FacebookSdk;
 import com.parse.Parse;
 import com.parse.ParseFacebookUtils;

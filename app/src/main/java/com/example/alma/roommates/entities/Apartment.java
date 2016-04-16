@@ -1,26 +1,21 @@
-package com.example.alma.roommates;
+package com.example.alma.roommates.entities;
 
 
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-import java.util.ArrayList;
 
 @ParseClassName("Apartment")
 public class Apartment extends ParseObject{
 
-    public Apartment (){
-
-    }
+    public Apartment (){}
 
     public void setName(String name) {
         put("appName", name);
     }
 
-    public String getName() {
-        return getString("appName");
-    }
+    public String getName() { return getString("appName"); }
 
     public void setNumOfRoomates(int numOfRoomates) {
         put("numOfRoomates", numOfRoomates);

@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:orientation="horizontal"
+        android:id="@+id/shoplist_add_layout"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:textSize="18dp"
+            android:textColorHint="#c4c4c4"
+            android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:id="@+id/shoplist_new_item_text"
+            android:background="@drawable/edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/add_to_list"
+            android:singleLine="true"
+            android:layout_weight="0.99"
+            android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone" />
+        <Button
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:id="@+id/shoplist_add_btn"
+            android:background="@drawable/btn_add"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="+"
+            android:layout_weight="0.01" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/shoplist_srl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/shoplist_recycler_view"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>

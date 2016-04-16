@@ -1,5 +1,6 @@
 package com.example.alma.roommates;
 
+import com.example.alma.roommates.entities.Apartment;
 import com.parse.ParseUser;
 import com.squareup.picasso.Picasso;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Welcome extends AppCompatActivity {
+public class AppMainScreen extends AppCompatActivity {
 
     // Declare Variable
     private TextView userName,userApartmentId,userEmail;
@@ -37,7 +38,7 @@ public class Welcome extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome);
+        setContentView(R.layout.app_main_screen);
 
         // Set a Toolbar to replace the ActionBar.
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -85,7 +86,7 @@ public class Welcome extends AppCompatActivity {
         userName.setText(myUserName);
         userEmail.setText(myUserMail);
         userApartmentId.setText("Apartment ID: "+myUserAppId);
-        Picasso.with(Welcome.this).load(myUserImageUrl).resize(200, 200).centerCrop().into(profileImage);
+        Picasso.with(AppMainScreen.this).load(myUserImageUrl).resize(200, 200).centerCrop().into(profileImage);
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
@@ -110,14 +111,14 @@ public class Welcome extends AppCompatActivity {
 
         Class fragmentClass;
         switch(menuItem.getItemId()) {
-            case R.id.nav_first_fragment:
+            case R.id.expances_fragment:
                 fragmentClass = ExpensesTabFragment.class;
                 break;
-            case R.id.nav_second_fragment:
+            case R.id.tasks_fragment:
                 fragmentClass = FirstFragment.class;
                 break;
-            case R.id.nav_third_fragment:
-                fragmentClass = FirstFragment.class;
+            case R.id.shopping_list_fragment:
+                fragmentClass = ShoppingListFragment.class;
                 break;
             default:
                 fragmentClass = FirstFragment.class;

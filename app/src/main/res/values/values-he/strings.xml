@@ -15,7 +15,7 @@
     <string name="facebook_login">Login with Facebook</string>
 
     <!--***** SET_USER_APARTMENT *****-->
-    <!-- welcome title with name-->
+    <!-- app_main_screen title with name-->
     <string name="join_new_app_title">היי</string>
     <!-- description-->
     <string name="new_or_existing_app">Apartment is where you live, work and play</string>

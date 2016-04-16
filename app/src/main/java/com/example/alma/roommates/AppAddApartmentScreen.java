@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.alma.roommates.entities.Apartment;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -19,7 +20,7 @@ import com.parse.SaveCallback;
 /**
  * Created by alma on 09/01/2016.
  */
-public class AddApartment extends AppCompatActivity {
+public class AppAddApartmentScreen extends AppCompatActivity {
 
 
     private Button creteNewApp,joinExistingApp;
@@ -47,6 +48,7 @@ public class AddApartment extends AppCompatActivity {
             }
         });
     }
+
     // Add the current user to a new apartment
     public void addUserToNewApartment(final ParseUser currentUser){
         creteNewApp.setEnabled(false);
@@ -67,7 +69,7 @@ public class AddApartment extends AppCompatActivity {
                             public void done(ParseException e) {
                                 if (e == null) {
                                     Log.d("MyApp", "user added new Apartment sucsessfuly");
-                                    Intent intent = new Intent(AddApartment.this, Welcome.class);
+                                    Intent intent = new Intent(AppAddApartmentScreen.this, AppMainScreen.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
@@ -108,7 +110,7 @@ public class AddApartment extends AppCompatActivity {
                         foundApp.saveInBackground(new SaveCallback() {
                             @Override
                             public void done(ParseException e) {
-                                Intent intent = new Intent(AddApartment.this, Welcome.class);
+                                Intent intent = new Intent(AppAddApartmentScreen.this, AppMainScreen.class);
                                 startActivity(intent);
                                 finish();
                             }
@@ -142,6 +144,6 @@ public class AddApartment extends AppCompatActivity {
         error =(TextView)findViewById(R.id.error_text_field);
         welcome = (TextView) findViewById(R.id.welcome);
         String name = currentUser.getUsername().toString();
-        welcome.setText("Welcome "+name);
+        welcome.setText("AppMainScreen "+name);
     }
 }

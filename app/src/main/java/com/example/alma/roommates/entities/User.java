@@ -1,4 +1,4 @@
-package com.example.alma.roommates;
+package com.example.alma.roommates.entities;
 
 import com.parse.ParseUser;
 
